@@ -1,29 +1,56 @@
-# Microblog Application
+# Tweeter - Mini Blog
 
-This is a simple microblog application built using Flask, SQLAlchemy, and Bootstrap. It supports features like user registration, login, following/unfollowing users, creating posts, and exploring content. It is designed to serve as a foundational project for learning Flask and web development.
+This is a microblogging application built using Flask, SQLAlchemy, and Bootstrap. It allows users to register, log in, create posts, follow other users, and explore posts. This project serves as a foundational learning tool for Flask web development.
 
 ## Features
 
-- **User Authentication**: Users can register, log in, and log out.
-- **User Profiles**: Users can view and edit their profiles.
-- **Post Creation**: Users can create and view posts.
-- **Follow/Unfollow**: Users can follow and unfollow other users.
-- **Pagination**: Posts are displayed with pagination for better usability.
-- **Email Notifications**: Admins are notified in case of errors.
-
-## Technologies Used
-
-- **Flask**: A lightweight Python web framework for building web applications.
-- **SQLAlchemy**: ORM (Object Relational Mapper) for interacting with the database.
-- **Bootstrap**: Front-end framework for creating responsive designs.
-- **Flask-WTF**: Flask extension for handling forms and CSRF protection.
-- **Flask-Mail**: Flask extension for handling email functionality.
+- **User Authentication**: Sign up, log in, and log out.
+- **User Profiles**: View and edit user profiles.
+- **Post Creation**: Create and delete posts.
+- **Following System**: Follow/unfollow users.
+- **Explore Feed**: View posts from all users.
 
 ## Installation
 
-Follow the steps below to get this project running locally on your machine.
-
 ### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- Virtual environment (optional but recommended)
 
-- Python 3.x
-- pip (Python package manager)
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/tweeter-mini-blog.git
+   cd tweeter-mini-blog
+   ```
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Set up the database:
+   ```bash
+   flask db init
+   flask db migrate -m "Initial migration."
+   flask db upgrade
+   ```
+5. Run the application:
+   ```bash
+   flask run
+   ```
+
+## Configuration
+Modify `config.py` for database settings, secret keys, and other configurations.
+
+## Deployment
+To deploy on a production server:
+- Use **Gunicorn** or **uWSGI** as a WSGI server.
+- Set up a **PostgreSQL** or **MySQL** database for production.
+- Configure **nginx** or **Apache** as a reverse proxy.
+
+## Contributing
+Contributions are welcome! Please submit a pull request with detailed changes.
